@@ -24,8 +24,8 @@ namespace GlobalProject_1
         {
             InitializeComponent();
 
-            //Plan Prog = new Plan();
-            //Prog.Show();
+            Plan Prog = new Plan();
+            Prog.Show();
             //this.Close();
 
         }
