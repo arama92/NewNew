@@ -1,0 +1,82 @@
+﻿<Application x:Class="GlobalProject_1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GlobalProject_1"
+             StartupUri="Menu.xaml">
+    <Application.Resources>
+
+        <BitmapImage x:Key="Icon_1" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\controller_configurable.png"/>
+        <BitmapImage x:Key="Icon_2" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\placeholder_playlists.jpg"/>
+        <BitmapImage x:Key="Icon_3" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\screenshot_grid_shadow.png"/>
+        <BitmapImage x:Key="Icon_4" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\15.png"/>
+        <BitmapImage x:Key="Icon_5" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\Бомбер.png"/>
+        
+        <BitmapImage x:Key="BG_1" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\stream_connected.png"/>
+        <BitmapImage x:Key="BG_2" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\capsule_03.jpg"/>
+        <BitmapImage x:Key="BG_3" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\panel_background.png"/>
+        <BitmapImage x:Key="BG_4" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\placeholder_album8.jpg"/>
+        <BitmapImage x:Key="BG_5" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\19832bc0bae936fde4013ca94df43b8c7208028e.jpg"/>
+        <BitmapImage x:Key="BG_6" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\stream_connected.png"/>
+
+        <BitmapImage x:Key="BG_7" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\rWRHfTYqy9E.jpg"/>
+        <BitmapImage x:Key="BG_8" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\utMqEhM45m4.jpg"/>
+        <BitmapImage x:Key="BG_9" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\wJycaNiG4l0.jpg"/>
+        <BitmapImage x:Key="BG_10" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\y0SCoAvJCvg.jpg"/>
+       
+        <ImageBrush x:Key="BG_7_Flag_BIB" ImageSource="{DynamicResource BG_7_Flag_BI}"/>
+        <ImageSource x:Key="BG_7_Flag_BI">Resources\no-translate-detected_1262-13660.jpg</ImageSource>
+        
+
+        <ImageBrush x:Key="BG_15_1_BIB" ImageSource="{DynamicResource BG_15_1_BI}"/>
+        <ImageSource x:Key="BG_15_1_BI">Resources\1.png</ImageSource>
+        
+        <ImageBrush x:Key="BG_15_2_BIB" ImageSource="{DynamicResource BG_15_2_BI}"/>
+        <ImageSource x:Key="BG_15_2_BI">Resources\2.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_3_BIB" ImageSource="{DynamicResource BG_15_3_BI}"/>
+        <ImageSource x:Key="BG_15_3_BI">Resources\3.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_4_BIB" ImageSource="{DynamicResource BG_15_4_BI}"/>
+        <ImageSource x:Key="BG_15_4_BI">Resources\4.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_5_BIB" ImageSource="{DynamicResource BG_15_5_BI}"/>
+        <ImageSource x:Key="BG_15_5_BI">Resources\5.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_6_BIB" ImageSource="{DynamicResource BG_15_6_BI}"/>
+        <ImageSource x:Key="BG_15_6_BI">Resources\6.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_7_BIB" ImageSource="{DynamicResource BG_15_7_BI}"/>
+        <ImageSource x:Key="BG_15_7_BI">Resources\7.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_8_BIB" ImageSource="{DynamicResource BG_15_8_BI}"/>
+        <ImageSource x:Key="BG_15_8_BI">Resources\8.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_9_BIB" ImageSource="{DynamicResource BG_15_9_BI}"/>
+        <ImageSource x:Key="BG_15_9_BI">Resources\9.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_10_BIB" ImageSource="{DynamicResource BG_15_10_BI}"/>
+        <ImageSource x:Key="BG_15_10_BI">Resources\10.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_11_BIB" ImageSource="{DynamicResource BG_15_11_BI}"/>
+        <ImageSource x:Key="BG_15_11_BI">Resources\11.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_12_BIB" ImageSource="{DynamicResource BG_15_12_BI}"/>
+        <ImageSource x:Key="BG_15_12_BI">Resources\12.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_13_BIB" ImageSource="{DynamicResource BG_15_13_BI}"/>
+        <ImageSource x:Key="BG_15_13_BI">Resources\13.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_14_BIB" ImageSource="{DynamicResource BG_15_14_BI}"/>
+        <ImageSource x:Key="BG_15_14_BI">Resources\14.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_15_BIB" ImageSource="{DynamicResource BG_15_15_BI}"/>
+        <ImageSource x:Key="BG_15_15_BI">Resources\15.png</ImageSource>
+
+        <ImageBrush x:Key="BG_15_16_BIB" ImageSource="{DynamicResource BG_15_16_BI}"/>
+        <ImageSource x:Key="BG_15_16_BI">Resources\16.png</ImageSource>
+
+
+
+
+    </Application.Resources>
+</Application>

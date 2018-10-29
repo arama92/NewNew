@@ -1,0 +1,51 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GlobalProject_1"
+        xmlns:Properties="clr-namespace:GlobalProject_1.Properties" x:Class="GlobalProject_1.MainWindow"
+        mc:Ignorable="d"
+        Icon="{DynamicResource Icon_1}"
+        WindowStartupLocation="CenterScreen"
+        Title="Project 1. Menu" Height="600" Width="500" MaxWidth="500" MaxHeight="600" FontSize="36">
+    <Window.Background>
+        <ImageBrush ImageSource="{DynamicResource BG_1}" />
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Сalculator_1" Grid.Row="2" Background="#FFDDDDDD" Click="Button_Click_Start_Calculator1"/>
+        <Button Content="GameIn15" Grid.Row="3" Click="Button_Click_Start_GameIn15"/>
+        <Button Content="Сalculator_2" Grid.Column="1" Grid.Row="2" Click="Button_Click_Start_Calculator2"/>
+        <Button Content="Sudoku" Grid.Column="1" Grid.Row="3" Click="Button_Click_Start_Sudoku"/>
+        <Button Content="Plan" Grid.Row="4" Grid.ColumnSpan="2" Click="Button_Click_Start_Plan"/>
+        <Label Content="Version: 1.0 beta" Grid.Row="5" Grid.ColumnSpan="2" FontStyle="Italic" Foreground="#FF12A5D1">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF54AC80" Offset="0.719"/>
+                    <GradientStop Color="#FFAE251E" Offset="0.183"/>
+                    <GradientStop Color="#FFAC5488" Offset="0.928"/>
+                    <GradientStop Color="#FF273381" Offset="0.476"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Image Grid.ColumnSpan="2"/>
+        <Button Content="Sapper" Grid.Row="1" Click="Button_Click_Start_Sapper"/>
+        <Button Content="Tab" Grid.Column="1" Grid.Row="1" Click="Button_Click_Start_Tab" />
+
+
+    </Grid>
+</Window>

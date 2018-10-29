@@ -1,0 +1,26 @@
+﻿<Window x:Name="Game15" x:Class="GlobalProject_1.GameIn15"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GlobalProject_1"
+        mc:Ignorable="d"
+        Icon="{DynamicResource Icon_4}"
+        Title="GameIn15" Height="450" Width="800">
+
+    <Window.Background>
+        <ImageBrush ImageSource="{DynamicResource BG_5}" />
+    </Window.Background>
+    <Window.Resources>
+
+    </Window.Resources>
+    <Grid x:Name="Main_Grid" Margin="0">
+        <Button x:Name="One_But" Content="Перемешать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128" Height="64" FontSize="20" Click="Rand">
+            <Button.Background>
+                <ImageBrush ImageSource="{DynamicResource BG_6}"/>
+            </Button.Background>
+        </Button>
+
+
+    </Grid>
+</Window>

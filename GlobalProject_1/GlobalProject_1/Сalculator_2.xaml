@@ -1,0 +1,35 @@
+﻿<Window x:Class="GlobalProject_1.Сalculator_2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GlobalProject_1"
+        mc:Ignorable="d"
+        Icon="{DynamicResource Icon_3}"
+        Title="Сalculator_2" Height="600" Width="500" MaxWidth="500" MaxHeight="600" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="{DynamicResource BG_3}" />
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="TextBox_In" TextWrapping="Wrap" Grid.ColumnSpan="2" FontSize="36"/>
+        <TextBlock x:Name="TextBox_Resul" Grid.Row="1" TextWrapping="Wrap" Grid.ColumnSpan="2" FontSize="36"/>
+        <Button Content="Clear" Grid.Row="3" FontSize="36" Click="Button_Clear" RenderTransformOrigin="0.52,1.404"/>
+        <Button Content="Enter" Grid.Column="1" Grid.Row="3" FontSize="36" Click="Button_Enter"/>
+        
+
+    </Grid>
+</Window>
