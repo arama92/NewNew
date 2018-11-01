@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GlobalProject_1"
         mc:Ignorable="d"
         Icon="{DynamicResource Icon_4}"
-        Title="GameIn15" Height="450" Width="800">
+        Title="GameIn15" Height="450" Width="800" MinHeight="500" MinWidth="800" WindowStartupLocation="CenterScreen" >
 
     <Window.Background>
         <ImageBrush ImageSource="{DynamicResource BG_5}" />

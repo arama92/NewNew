@@ -173,20 +173,22 @@ namespace GlobalProject_1
         private void Check_Win()
         {
             bool temp = true;
-            for(int i = 1; i < ListBut.Count; i++)
+            StreamWriter sr = new StreamWriter("Sample.txt");
+            
+           
+            for (int i = 0; i < ListBut.Count; i++)
             {
-                if (Convert.ToInt16(ListBut[i].Content) > Convert.ToInt16(ListBut[i - 1].Content))
+                if (Convert.ToInt32(ListBut[i].Content) == i + 1)
                     temp = true;
-                else
-                    temp = false; 
-
+                else { temp = false; break; }
+                
             }
             if (temp)
             {
                 WinWindow proc = new WinWindow();
                 proc.Show();
             }
-            
+            sr.Close();
         }
 
 

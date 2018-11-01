@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GlobalProject_1"
         mc:Ignorable="d"
         Icon="{DynamicResource Icon_3}"
-        Title="Сalculator_2" Height="600" Width="500" MaxWidth="500" MaxHeight="600" WindowStartupLocation="CenterScreen">
+        Title="Сalculator_2" Height="600 " Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <ImageBrush ImageSource="{DynamicResource BG_3}" />
     </Window.Background>

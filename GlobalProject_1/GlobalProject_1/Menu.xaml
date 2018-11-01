@@ -7,8 +7,7 @@
         xmlns:Properties="clr-namespace:GlobalProject_1.Properties" x:Class="GlobalProject_1.MainWindow"
         mc:Ignorable="d"
         Icon="{DynamicResource Icon_1}"
-        WindowStartupLocation="CenterScreen"
-        Title="Project 1. Menu" Height="600" Width="500" MaxWidth="500" MaxHeight="600" FontSize="36">
+        Title="Project 1. Menu" Height="600 " Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontSize="36">
     <Window.Background>
         <ImageBrush ImageSource="{DynamicResource BG_1}" />
     </Window.Background>

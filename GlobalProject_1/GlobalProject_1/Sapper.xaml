@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GlobalProject_1"
         mc:Ignorable="d"
-        Title="Sapper" Height="500" Width="800" Icon="{DynamicResource Icon_5}">
+        Title="Sapper" Height="500" Width="800" Icon="{DynamicResource Icon_5}" MinHeight="500" MinWidth="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />

@@ -56,7 +56,7 @@ namespace GlobalProject_1
         }
         private void Button_Click_Start_Plan(object sender, RoutedEventArgs e)
         {
- 
+
             try
             {
                 Plan Prog = new Plan();
@@ -66,12 +66,9 @@ namespace GlobalProject_1
             catch
             {
                 System.IO.File.Delete(@"result.xml");
- 
-            }
-            finally
-            {
                 Plan Prog = new Plan();
                 Prog.Show();
+
             }
                         
         }
