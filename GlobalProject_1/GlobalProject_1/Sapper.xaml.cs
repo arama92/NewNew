@@ -76,12 +76,13 @@ namespace GlobalProject_1
             {
                 for (int j = 0; j < 12; j++)
                 {
-                    Button but = new Button() {Content = i.ToString() +" " +  j.ToString() };
-
-                    but.FontSize = 24;
-                    but.VerticalAlignment = VerticalAlignment.Stretch;
-                    but.HorizontalAlignment = HorizontalAlignment.Stretch;
-
+                    Button but = new Button()
+                    {
+                        Content = i.ToString() + " " + j.ToString(),
+                        VerticalAlignment = VerticalAlignment.Stretch,
+                        HorizontalAlignment = HorizontalAlignment.Stretch,
+                        FontSize = 24
+                    };
                     if (i == 0 || j == 0 || i == 11 || j == 11) { BPole[i, j] = but; }
                     else
                     {

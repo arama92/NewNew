@@ -15,9 +15,8 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.ColumnSpan="1" Content="Start" Width="125" Height="50" FontSize="24"/>
-        <Grid x:Name="Grid_Game" Grid.Column="1" Grid.Row="1" UseLayoutRounding="False">
-        </Grid>
+        <Button Grid.ColumnSpan="1" Content="Start" Width="125" Height="50" FontSize="24" />
+        <Grid x:Name="Grid_Game" Grid.Column="1" Grid.Row="1" UseLayoutRounding="False"/>
 
     </Grid>
 </Window>

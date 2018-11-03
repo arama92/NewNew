@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using System.Text.RegularExpressions;
 namespace GlobalProject_1
 {
     /// <summary>
@@ -24,14 +24,12 @@ namespace GlobalProject_1
         List<Grid> GridsList = new List<Grid>(); // форма бордер грид
 
         List<TextBox> TextList = new List<TextBox>();
-        TextBox[,] MasText = new TextBox[9, 9]; // лог массив 
-        //int[,] MasText = new int[9, 9];
+        TextBox[,] MasText = new TextBox[9, 9]; // лог массив  
 
         public Sudoku()
         {
             InitializeComponent();
             SET();
-            Conver_List_To_Mas();
         }
 
         private void SET()
@@ -52,7 +50,7 @@ namespace GlobalProject_1
                     Border b = new Border() {
                         BorderThickness = new Thickness(2),
                         BorderBrush = Brushes.Black,
-                    };
+                    }; 
 
                     Grid.SetRow(b, i); // на грид
                     Grid.SetRowSpan(b, 3);
@@ -64,7 +62,7 @@ namespace GlobalProject_1
 
                     BordersList.Add(b);
                 }
-            } // BORDER
+            } // BORDER рамка 3 на 3
 
 
             for (int i = 1; i <= 9; i++)
@@ -79,12 +77,13 @@ namespace GlobalProject_1
                 gr.ShowGridLines = true;
                 BordersList[i - 1].Child = gr;
                 GridsList.Add(gr);
-            }  // BRODER GRID
+            }  // BORODER GRID. Грид в бордер
 
-            int temp = 1;
+          
+            int str = 0, stol = 0;
             for (int glob = 0; glob < GridsList.Count; glob++)
             {
-
+                int temp = 1;
                 for (int i = 0; i < 3; i++)
                 {
                     for (int j = 0; j < 3; j++)
@@ -95,92 +94,34 @@ namespace GlobalProject_1
                             Text = temp.ToString(),
                             VerticalContentAlignment = VerticalAlignment.Center,
                             HorizontalContentAlignment = HorizontalAlignment.Center,
-                            FontSize = 24
+                            FontSize = 24,
+                            MaxLength = 1
                         };
+                        b.PreviewTextInput += new TextCompositionEventHandler(TextBox_PreviewTextInput);
                         temp++;
                         Grid.SetRow(b, i); // на грид
                         Grid.SetColumn(b, j); // на грид
 
-                        TextList.Add(b); // в список
+                        //TextList.Add(b); // в список
+                        MasText[i + str, j + stol] = b;
 
                         GridsList[glob].Children.Add(b);
 
                     }
                 }
+                stol+=3; temp = 0;
+                if (stol == 9)
+                {
+                    stol = 0; str += 3;
+                }
             }  // BORDER GRID TEXTBOX
 
-        }
-
-        private void Conver_List_To_Mas()
-        {/*
-            for(int i = 0; i < 9; i++)
-            {
-                for (int j = 0; j < 9; j++)
-                {
-                    MasText[i, j] = TextList[0];
-                }
-            }*/
-            
-            
-            List<int> list = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            int[,] mas = new int[3, 3];
-
-
-            int temp = 0;
-            for(int i = 0; i < 9; i+=3)
-            {
-                for(int j = 0; j < 9; j++)
-                {
-                    MasText[i, j] = TextList[temp];
-                    temp++;
-                    //MessageBox.Show(MasText[i, j].Text);
-                    if (j == 2 || j == 5 || j==8)
-                    {
-                        temp += 6;
-                    }
-                }   
-            }
-            /*
-            temp = 0;
-            for (int i = 1; i < 9; i += 3)
-            {
-                for (int j = 0; j < 9; j++)
-                {
-                    MasText[i, j] = TextList[temp];
-                    temp++;
-                    MessageBox.Show(MasText[i, j].Text);
-                    if (j == 0)
-                    {
-                        temp += 6;
-                    }
-                }
-            }*/
-
-            /*temp = 0;
-            for(int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    MessageBox.Show(list[temp].ToString());
-                    mas[i, j] = list[temp];
-                    temp += 3;
-                }
-                temp -= 5;
-            }*/
-
-            StreamWriter sr = new StreamWriter("Sample.txt");
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    sr.Write(mas[i, j].ToString() + " ");
-                }
-                sr.WriteLine("");
-            }
-           
-    
-        }
-
         
+        }
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+                Regex regex = new Regex("[^1-9]+"); // регулярка на доступные чиста
+                e.Handled = regex.IsMatch(e.Text);  // установка текста
+        }
     }
 }
