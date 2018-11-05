@@ -26,7 +26,7 @@ namespace GlobalProject_1
 
             Sudoku Prog = new Sudoku();
             Prog.Show();
-            //this.Close();
+            this.Close();
 
         }
 

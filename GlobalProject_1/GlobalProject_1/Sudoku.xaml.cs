@@ -23,7 +23,7 @@ namespace GlobalProject_1
         List<Border> BordersList = new List<Border>(); // форма бордер
         List<Grid> GridsList = new List<Grid>(); // форма бордер грид
 
-        List<TextBox> TextList = new List<TextBox>();
+        
         TextBox[,] MasText = new TextBox[9, 9]; // лог массив  
 
         public Sudoku()
@@ -118,10 +118,117 @@ namespace GlobalProject_1
 
         
         }
+
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
                 Regex regex = new Regex("[^1-9]+"); // регулярка на доступные чиста
                 e.Handled = regex.IsMatch(e.Text);  // установка текста
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            int str = 0, stol = 0;
+            for (int glob = 0; glob < 9; glob++)
+            {
+                int temp = 1;
+                for (int i = 0; i < 3; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        //MasText[i, j].Text = temp.ToString();
+                        MasText[i + str, j + stol].Text = temp.ToString();
+                        temp++;
+                    }
+                }
+                stol += 3; temp = 0;
+                if (stol == 9)
+                {
+                    stol = 0; str += 3;
+                }
+            }  
+
+            Random rand = new Random();
+            int _i = 0;
+            
+            while(_i < 3)
+            {
+                int i = rand.Next(0, 9);
+                if(MasText[i, i].Text != " ")
+                {
+                    MasText[i, i].Text = " ";
+                    _i++;
+                }           
+            } // Левая  Г Д
+            _i = 0;
+            while (_i < 3)
+            {
+                int i = rand.Next(0, 9);
+                if (MasText[i, 8-i].Text != " ")
+                {
+                    MasText[i, 8-i].Text = " ";
+                    _i++;
+                }
+            } // правая Г Д
+
+            _i = 0;
+            while (_i < 3) // диагональ 1, 2, 3, 4. Боковые от М
+            {
+                int i = rand.Next(0, 8);
+
+                //ок
+                MasText[i, i + 1].Text = " "; //левая + 1
+                MasText[i + 1, i].Text = " "; //левая - 1 
+
+                //ок
+                MasText[i + 1, 8 - i].Text = " "; //правая + 1
+                MasText[i, 7 - i].Text = " "; //правая - 1
+
+
+                //ок
+                i = rand.Next(0, 7);
+                MasText[i, i + 2].Text = " "; //левая + 2
+                MasText[i + 2, i].Text = " "; //левая - 2
+
+                //ок
+                MasText[i, 6 - i].Text = " "; //правая - 2
+                MasText[i + 2, 8 - i].Text = " "; //правая + 2
+
+                _i++;
+            } // 1й и 3й квадрат - диагонали
+
+            _i = 0;
+            while (_i < 2)
+            {
+                int i = rand.Next(0, 6);
+                MasText[i, 5 - i].Text = " "; // главная диагональ
+                MasText[i + 1, 5 - i].Text = " "; // + 1
+                MasText[i + 2, 5 - i].Text = " "; // + 2
+
+                i = rand.Next(0, 5);
+                MasText[i, 4 - i].Text = " "; //  - 1 
+                i = rand.Next(0, 4);
+                MasText[i, 3 - i].Text = " "; //  - 2 
+                
+                             
+                _i++;
+            } // 2й квадрат диагонали
+
+            _i = 0;
+            while (_i < 2)
+            {
+                int i = rand.Next(3, 9);
+                MasText[i, 8 - i + 3].Text = " "; // главная диагональ
+
+                MasText[i, 8 - i + 2].Text = " "; // - 1
+                MasText[i, 8 - i + 1].Text = " "; // - 2
+
+                i = rand.Next(3 + 1, 9);
+                MasText[i, 8 - i + 4].Text = " "; //  + 1 
+                i = rand.Next(3 + 2, 9);
+                MasText[i, 8 - i + 5].Text = " "; //  + 2 
+
+                _i++;
+            }// 6й квадрат диагонали
         }
     }
 }
