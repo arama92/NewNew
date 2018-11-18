@@ -24,7 +24,9 @@ namespace GlobalProject_1
         {
             InitializeComponent();
 
-            Sudoku Prog = new Sudoku();
+            //System.Diagnostics.Process.Start(@"Sample.txt");
+
+            Tab Prog = new Tab();
             Prog.Show();
             this.Close();
 

@@ -37,3 +37,5 @@ C:\Users\odmen\Desktop\Трпп\GlobalProject_1\GlobalProject_1\obj\Debug\WinWin
 C:\Users\odmen\Desktop\Трпп\GlobalProject_1\GlobalProject_1\bin\Debug\Resources\1gfljb_X30.mp4
 C:\Users\odmen\Desktop\Трпп\GlobalProject_1\GlobalProject_1\obj\Debug\Menu.g.cs
 C:\Users\odmen\Desktop\Трпп\GlobalProject_1\GlobalProject_1\obj\Debug\Menu.baml
+C:\Users\odmen\Desktop\Трпп\GlobalProject_1\GlobalProject_1\obj\Debug\Page1_Table.g.cs
+C:\Users\odmen\Desktop\Трпп\GlobalProject_1\GlobalProject_1\obj\Debug\Page1_Table.baml

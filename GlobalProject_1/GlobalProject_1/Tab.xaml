@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GlobalProject_1"
         mc:Ignorable="d"
-        Title="Tab" Height="450" Width="800">
+        Title="Tab" Height="600" Width="800" MinWidth="800" MinHeight="599" >
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="30" Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="1,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="Tb_Pass" Grid.Column="1" TextWrapping="Wrap"  VerticalContentAlignment="Center" />
+                <TextBox x:Name="Tb_Login" TextWrapping="Wrap"  VerticalContentAlignment="Center"/>
+                <Button Content="Войти" Grid.Column="2" MaxWidth="45" MinWidth="45" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Click="Aut"/>
+                <Label x:Name="Lab_Log" Content="Login: " Grid.Column="4" VerticalContentAlignment="Center"/>
+                <Label x:Name="Lab_status" Content="Status: " Grid.Column="5" VerticalContentAlignment="Center"/>
+                <CheckBox x:Name="CheckBox" Content="Про режим" Grid.Column="2" VerticalContentAlignment="Center" Margin="45,0,0,0"/>
+
+
+            </Grid>
+        </Border>
+        <Frame x:Name="Frame_Page" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

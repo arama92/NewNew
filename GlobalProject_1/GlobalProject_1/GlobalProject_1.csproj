@@ -67,6 +67,10 @@
     <Compile Include="GameIn15.xaml.cs">
       <DependentUpon>GameIn15.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MySqlClass.cs" />
+    <Compile Include="Page1_Table.xaml.cs">
+      <DependentUpon>Page1_Table.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Plan.xaml.cs">
       <DependentUpon>Plan.xaml</DependentUpon>
     </Compile>
@@ -105,6 +109,10 @@
       <DependentUpon>Menu.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Page1_Table.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Plan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
