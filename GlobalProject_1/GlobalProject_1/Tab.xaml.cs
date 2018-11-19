@@ -78,54 +78,47 @@ namespace GlobalProject_1
                     Lab_status.Content = "Status: Bad Hacker";
                     Lab_status.Background = Brushes.Red;
                 }
-                //Into_Log();
+                Into_Log();
             } // Pro режим
             else
             {
-                    //Into_Log();
-                    Frame_Page.Content = new Page1_Table();     
+                
+                Frame_Page.Content = new Page1_Table();
+                
             }
-        }
+        } // оптимизировать!
         private void Into_Log()
         {
-            try // запись в лог ДЕЛАТЬ
+            try
             {
+
                 Conn.Open();
 
-                MySqlCommand command = new MySqlCommand("call Proc_1", Conn)
+                MySqlCommand command = new MySqlCommand("Proc_Into_Log", Conn)
                 {
-                    // указываем, что команда представляет хранимую процедуру
-                    CommandType = System.Data.CommandType.StoredProcedure
+                    CommandType = CommandType.StoredProcedure
                 };
+                MySqlParameter p = new MySqlParameter();
+                command.Parameters.AddWithValue("s_datatime", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                command.Parameters.AddWithValue("s_log", Tb_Login.Text);
+                command.Parameters.AddWithValue("s_pass", Tb_Pass.Text);
+                if(Lab_status.Content.ToString() == "Status: Accept")        
+                    command.Parameters.AddWithValue("s_stat", 1);
+                else
+                    command.Parameters.AddWithValue("s_stat", 0);
 
-                //текст ответа
-                MySqlParameter contentParam = new MySqlParameter
-                {
-                    ParameterName = "@login",
-                    Value = "1",
-                    MySqlDbType = MySqlDbType.VarChar
-                };
-                command.Parameters.Add(contentParam);
-
-                contentParam = new MySqlParameter
-                {
-                    ParameterName = "@pass",
-                    Value = "1",
-                    MySqlDbType = MySqlDbType.VarChar
-                };
-                command.Parameters.Add(contentParam);
+                command.ExecuteNonQuery();
 
                 // закрываем соединение с БД
                 Conn.Close();
                 Conn.Dispose(); // освободить ресурс
-
-                //Frame_Page.Content = new Page1_Table();  
             }
             catch
             {
-                MessageBox.Show("oops... Server AFK");
+                MessageBox.Show("ooops... Server AFK");
             }
+
         }
-  
+        
     }
 }

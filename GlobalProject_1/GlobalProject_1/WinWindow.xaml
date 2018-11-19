@@ -4,11 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GlobalProject_1"
-        mc:Ignorable="d" Height="400" Width="500" WindowStartupLocation="CenterScreen"
-         ResizeMode="NoResize" WindowStyle="ToolWindow">
+        mc:Ignorable="d" Height="400" Width="500" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize">
+
+    <Window.Background>
+        <ImageBrush ImageSource="{DynamicResource BG_11}" />
+    </Window.Background>
 
     <Grid>
-        <MediaElement Name="MED" >
+        
+        <MediaElement Name="MED" Grid.Column="1" >
             <MediaElement.Triggers>
                 <EventTrigger RoutedEvent="MediaElement.Loaded">
                     <EventTrigger.Actions>
@@ -22,7 +26,7 @@
                     </EventTrigger.Actions>
                 </EventTrigger>
             </MediaElement.Triggers>
-        </MediaElement>  
+        </MediaElement>
 
     </Grid>
 </Window>

@@ -17,12 +17,15 @@
         <BitmapImage x:Key="BG_4" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\placeholder_album8.jpg"/>
         <BitmapImage x:Key="BG_5" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\19832bc0bae936fde4013ca94df43b8c7208028e.jpg"/>
         <BitmapImage x:Key="BG_6" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\stream_connected.png"/>
+        
 
         <BitmapImage x:Key="BG_7" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\rWRHfTYqy9E.jpg"/>
         <BitmapImage x:Key="BG_8" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\utMqEhM45m4.jpg"/>
         <BitmapImage x:Key="BG_9" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\wJycaNiG4l0.jpg"/>
         <BitmapImage x:Key="BG_10" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\y0SCoAvJCvg.jpg"/>
-       
+
+        <BitmapImage x:Key="BG_11" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="Resources\diagbg.png"/>
+
         <ImageBrush x:Key="BG_7_Flag_BIB" ImageSource="{DynamicResource BG_7_Flag_BI}"/>
         <ImageSource x:Key="BG_7_Flag_BI">Resources\no-translate-detected_1262-13660.jpg</ImageSource>
         

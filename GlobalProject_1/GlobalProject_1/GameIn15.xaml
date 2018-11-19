@@ -11,9 +11,7 @@
     <Window.Background>
         <ImageBrush ImageSource="{DynamicResource BG_5}" />
     </Window.Background>
-    <Window.Resources>
-
-    </Window.Resources>
+    
     <Grid x:Name="Main_Grid" Margin="0">
         <Button x:Name="One_But" Content="Перемешать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128" Height="64" FontSize="20" Click="Rand">
             <Button.Background>

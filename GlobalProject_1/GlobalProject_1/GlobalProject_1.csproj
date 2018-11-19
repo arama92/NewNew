@@ -262,6 +262,7 @@
     <Content Include="Resources\1gfljb_X30.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\diagbg.png" />
     <Content Include="Resources\ELW.Library.Math.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
