@@ -26,9 +26,9 @@ namespace GlobalProject_1
 
             //System.Diagnostics.Process.Start(@"Sample.txt");
             
-            Tab Prog = new Tab();
-            Prog.Show();
-            this.Close();
+            //Tab Prog = new Tab();
+            //Prog.Show();
+            //this.Close();
 
         }
 
